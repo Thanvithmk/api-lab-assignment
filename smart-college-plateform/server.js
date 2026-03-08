@@ -55,7 +55,7 @@ app.delete("/users/:id", (req, res) => {
         return res.status(404).json({ message: "User not found" });
     }
     users.splice(userIndex, 1);
-    res.status(204).send();
+    res.status(200).json({ message: "User deleted successfully" });
 });
 
 app.listen(port, () => {
