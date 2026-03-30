@@ -20,10 +20,12 @@ const schema = buildSchema(`
     book(id: ID!): Book
   }
 
-  type Mutation {
+  type Mutation {   
     addBook(title: String!, author: String!): Book
   }
 `);
+/* Query : Fetches data */
+/* Mutation : Modifies data */
 
 /* =========================
    Sample Data
@@ -34,7 +36,7 @@ let books = [
 ];
 
 /* =========================
-   Resolvers
+   Resolvers - method definations for the schema fields
 ========================= */
 const root = {
   books: () => books,
